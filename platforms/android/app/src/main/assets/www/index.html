@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>School Business</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/index.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <!--Ícones do Remix Icon-->
+    <link rel="stylesheet" href="css/remixicon/remixicon.css">
+
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="index" class="page color-theme-blue">
+
+                <!-- Top Navbar -->
+                <div class="navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner justify-content-center">
+                        <div class="title"><img src="./img/menuLogo.png" class="menuLogo" id="menuLogo"></div>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content" id="pageContentLogin">
+                    <div class="block">
+                        <div class="loginPopup">
+                            <div class="backgroundPopup">
+                            <div class="loginBrand">
+                                <img src="./img/menuLogo.png" class="loginLogo" alt="School Business">
+                                <div class="loginHeadline">
+                                <span class="kicker">School Business</span>
+                                <span class="titlePopup">Entre em sua conta</span>
+                                </div>
+                            </div>
+
+                            <div class="loginFields">
+                                <div class="fieldWrap" id="nameWrap">
+                                <p class="subTitlePopup" id="labelName"><i class="ri-user-3-line"></i> Nome</p>
+                                <div class="inputWrap">
+                                    <input class="fieldLogin" type="name" id="name" name="name" placeholder="Coloque seu nome" required>
+                                </div>
+                                </div>
+
+                                <div class="fieldWrap">
+                                <p class="subTitlePopup"><i class="ri-mail-line"></i> Email</p>
+                                <div class="inputWrap">
+                                    <input class="fieldLogin" type="email" id="email" name="email" placeholder="Coloque seu email" required>
+                                </div>
+                                </div>
+
+                                <div class="fieldWrap">
+                                <p class="subTitlePopup"><i class="ri-key-2-fill"></i>Senha</p>
+                                <div class="inputWrap">
+                                    <input class="fieldLogin" type="password" id="password" name="password" placeholder="Coloque sua senha" required>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="loginActions">
+                                <button class="loginBtn" id="btnLogin">
+                                <span>Entrar</span>
+                                <i class="ri-arrow-right-line"></i>
+                                </button>
+
+                                <a href="#" id="toggleMode" class="toggleLink">
+                                Não tem conta? <b>Criar agora</b>
+                                </a>
+                            </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>	
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/userSession.js"></script>
+    <script type="text/javascript" src="js/profileActions.js"></script>
+    <script type="text/javascript" src="js/sbUser.js"></script>
+    <script type="text/javascript" src="js/themes.js"></script>
+    <script type="text/javascript" src="js/notification.js"></script>
+    <script type="text/javascript" src="js/portugueseUploadFake.js"></script>
+    <script type="text/javascript" src="js/homeFilters.js"></script>
+    <script type="text/javascript" src="js/muralFilters.js"></script>
+    <script type="text/javascript" src="js/links.js"></script>
+    <script src="cordova.js"></script>
+    <script>
+  if (location.protocol !== 'file:') {
+  } else {
+    var s = document.createElement('script');
+    s.src = 'cordova.js';
+    document.body.appendChild(s);
+  }
+</script>
+</body>
+</html>

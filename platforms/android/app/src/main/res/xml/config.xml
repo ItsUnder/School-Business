@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="br.com.curso.schoolbusiness" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
+    <feature name="FilePath">
+        <param name="android-package" value="com.hiddentao.cordova.filepath.FilePath" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="CropPlugin">
+        <param name="android-package" value="com.jeduan.crop.CropPlugin" />
+    </feature>
+    <feature name="FileOpener2">
+        <param name="android-package" value="io.github.pwlin.cordova.plugins.fileopener2.FileOpener2" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="LocalNotification">
+        <param name="android-package" value="de.appplant.cordova.plugin.localnotification.LocalNotification" />
+    </feature>
+    <allow-navigation href="http://localhost/*" />
+    <allow-navigation href="https://localhost/*" />
+    <allow-navigation href="ionic://*" />
+    <feature name="IonicWebView">
+        <param name="android-package" value="com.ionicframework.cordova.webview.IonicWebView" />
+    </feature>
+    <name>School Business</name>
+    <description>
+        App feito como estudo
+    </description>
+    <author email="matheusmarianoe@gmail.com" href="https://cordova.apache.org">
+        Matheus Mariano
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <access origin="*" />
+    <allow-navigation href="*" />
+    <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
+    <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
+    <icon density="hdpi" src="resources/android/icon/drawable-hdpi-icon.png" />
+    <icon density="xhdpi" src="resources/android/icon/drawable-xhdpi-icon.png" />
+    <icon density="xxhdpi" src="resources/android/icon/drawable-xxhdpi-icon.png" />
+    <icon density="xxxhdpi" src="resources/android/icon/drawable-xxxhdpi-icon.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="webView" value="com.ionicframework.cordova.webview.IonicWebViewEngine" />
+    <preference name="GradlePluginKotlinEnabled" value="true" />
+    <preference name="AndroidWindowSplashScreenBackgroundColor" value="#200B34" />
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/splashIcon.png" />
+    <preference name="AndroidWindowSplashScreenIconBackgroundColor" value="#200B34" />
+    <preference name="BackgroundColor" value="#200B34" />
+    <preference name="SplashScreenBackgroundColor" value="#200B34" />
+</widget>

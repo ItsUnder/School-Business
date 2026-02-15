@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <meta name="theme-color" content="#2196f3" />
+
+  <title>School Business</title>
+
+  <link rel="stylesheet" href="lib/framework7-bundle.min.css" />
+  <link rel="stylesheet" href="css/personalizado.css" />
+  <link rel="stylesheet" href="css/materialdesignicons.min.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="view view-main">
+      <div data-name="link2" class="page">
+
+        <div class="navbar">
+          <div class="navbar-bg"></div>
+          <div class="navbar-inner">
+            <div class="title">
+              <img src="./img/menuLogo.png" class="menuLogo" id="homeLogo" />
+            </div>
+
+            <a href="/profile/" class="userProfile link">
+              <div class="userProfile">
+                <span class="username"><span class="userName"></span></span>
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="User Avatar"
+                  class="userAvatar userAvatarEl" />
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="page-content">
+          <div class="block">
+
+            <div class="section-title">
+              <span class="section-line"></span>
+              <span class="section-text">Disciplinas</span>
+            </div>
+            <div class="swiper swiperCategoriesMural">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <button class="filter-btn-active" data-filter="todas">
+                    <span class="mdi mdi-view-grid-outline"></span> 
+                    <span class="filter-text">Todas</span>
+                  </button>
+                </div>
+
+                <div class="swiper-slide">
+                  <button class="filter-btn" data-filter="linguagens">
+                    <span class="mdi mdi-clipboard-text-outline"></span> 
+                    <span class="filter-text">Linguagens</span>
+                  </button>
+                </div>
+
+                <div class="swiper-slide">
+                  <button class="filter-btn" data-filter="exatas">
+                    <span class="mdi mdi-school-outline"></span>
+                    <span class="filter-text">Exatas</span>
+                  </button>
+                </div>
+
+                <div class="swiper-slide">
+                  <button class="filter-btn" data-filter="humanas">
+                    <span class="mdi mdi-bell-outline"></span> 
+                    <span class="filter-text">Humanas</span>
+                  </button>
+                </div>
+
+                <div class="swiper-slide">
+                  <button class="filter-btn" data-filter="natureza">
+                    <span class="mdi mdi-podcast"></span>
+                    <span class="filter-text">Natureza</span>
+                  </button>
+                </div>
+
+                <div class="swiper-slide">
+                  <button class="filter-btn" data-filter="pedagogia">
+                    <span class="mdi mdi-calendar-month-outline"></span> 
+                    <span class="filter-text">Pedagogia</span>
+                  </button>
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="list subject-list">
+              <ul>
+
+                <li>
+                  <div class="mural-section" data-section="linguagens">
+                    <div class="category-title">
+                      <span class="category-text">Linguagens</span>
+                    </div>
+
+                    <a href="/subject/portuguese/" class="subject-card portuguese">
+                      <div class="subject-left">
+                        <div class="subject-name">Português</div>
+                        <div class="subject-meta">
+                          <span class="chip chip-tomorrow">Amanhã</span>
+                        </div>
+                      </div>
+                      <div class="subject-right">
+                        <span class="badge badge-warn" id="badgePortuguese">1</span>
+                        <span class="chev">›</span>
+                      </div>
+                    </a>
+
+                    <a href="/subject/writing/" class="subject-card writing">
+                      <div class="subject-left">
+                        <div class="subject-name">Redação</div>
+                        <div class="subject-meta"></div>
+                      </div>
+                      <div class="subject-right">
+                        <span class="badge badge-warn">2</span>
+                        <span class="chev">›</span>
+                      </div>
+                    </a>
+
+                    <a href="/subject/literature/" class="subject-card literature">
+                      <div class="subject-left">
+                        <div class="subject-name">Literatura</div>
+                        <div class="subject-meta">
+                          <span class="chip chip-tomorrow">Amanhã</span>
+                        </div>
+                      </div>
+                      <div class="subject-right">
+                        <span class="badge badge-ok">0</span>
+                        <span class="chev">›</span>
+                      </div>
+                    </a>
+
+                    <a href="/subject/english/" class="subject-card english">
+                      <div class="subject-left">
+                        <div class="subject-name">Inglês</div>
+                        <div class="subject-meta">
+                          <span class="chip chip-today">Hoje</span>
+                        </div>
+                      </div>
+                      <div class="subject-right">
+                        <span class="badge badge-warn">2</span>
+                        <span class="chev">›</span>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="mural-section" data-section="exatas">
+                    <div class="category-title">
+                      <span class="category-text">Exatas</span>
+                    </div>
+
+                    <a href="/subject/math/" class="subject-card math">
+                      <div class="subject-left">
+                        <div class="subject-name">Matemática</div>
+                        <div class="subject-meta">
+                          <span class="chip chip-today">Hoje</span>
+                          <span class="chip chip-tomorrow">Amanhã</span>
+                        </div>
+                      </div>
+                      <div class="subject-right">
+                        <span class="badge badge-warn">3</span>
+                        <span class="chev">›</span>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="mural-section" data-section="humanas">
+                    <div class="category-title">
+                      <span class="category-text">Ciências Humanas</span>
+                    </div>
+
+                    <a href="/subject/history/" class="subject-card history">
+                      <div class="subject-left">
+                        <div class="subject-name">História</div>
+                        <div class="subject-meta">
+                          <span class="chip chip-today">Hoje</span>
+                        </div>
+                      </div>
+                      <div class="subject-right">
+                        <span class="badge badge-ok">0</span>
+                        <span class="chev">›</span>
+                      </div>
+                    </a>
+
+                    <a href="/subject/geography/" class="subject-card geography">
+                      <div class="subject-left">
+                        <div class="subject-name">Geografia</div>
+                        <div class="subject-meta">
+                          <span class="chip chip-today">Hoje</span>
+                          <span class="chip chip-tomorrow">Amanhã</span>
+                        </div>
+                      </div>
+                      <div class="subject-right">
+                        <span class="badge badge-warn">2</span>
+                        <span class="chev">›</span>
+                      </div>
+                    </a>
+
+                    <a href="/subject/philosophy/" class="subject-card philosophy">
+                      <div class="subject-left">
+                        <div class="subject-name">Filosofia</div>
+                        <div class="subject-meta">
+                          <span class="chip chip-tomorrow">Amanhã</span>
+                        </div>
+                      </div>
+                      <div class="subject-right">
+                        <span class="badge badge-warn">1</span>
+                        <span class="chev">›</span>
+                      </div>
+                    </a>
+
+                    <a href="/subject/sociology/" class="subject-card sociology">
+                      <div class="subject-left">
+                        <div class="subject-name">Sociologia</div>
+                        <div class="subject-meta"></div>
+                      </div>
+                      <div class="subject-right">
+                        <span class="badge badge-ok">0</span>
+                        <span class="chev">›</span>
+                      </div>
+                    </a>
+
+                    <a href="/subject/art/" class="subject-card art">
+                      <div class="subject-left">
+                        <div class="subject-name">Artes</div>
+                        <div class="subject-meta">
+                          <span class="chip chip-tomorrow">Amanhã</span>
+                        </div>
+                      </div>
+                      <div class="subject-right">
+                        <span class="badge badge-ok">0</span>
+                        <span class="chev">›</span>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="mural-section" data-section="natureza">
+                    <div class="category-title">
+                      <span class="category-text">Ciências da Natureza</span>
+                    </div>
+
+                    <a href="/subject/biology/" class="subject-card biology">
+                      <div class="subject-left">
+                        <div class="subject-name">Biologia</div>
+                        <div class="subject-meta">
+                          <span class="chip chip-tomorrow">Amanhã</span>
+                        </div>
+                      </div>
+                      <div class="subject-right">
+                        <span class="badge badge-warn">4</span>
+                        <span class="chev">›</span>
+                      </div>
+                    </a>
+
+                    <a href="/subject/chemistry/" class="subject-card chemistry">
+                      <div class="subject-left">
+                        <div class="subject-name">Química</div>
+                        <div class="subject-meta">
+                          <span class="chip chip-today">Hoje</span>
+                        </div>
+                      </div>
+                      <div class="subject-right">
+                        <span class="badge badge-warn">1</span>
+                        <span class="chev">›</span>
+                      </div>
+                    </a>
+
+                    <a href="/subject/physics/" class="subject-card physics">
+                      <div class="subject-left">
+                        <div class="subject-name">Física</div>
+                        <div class="subject-meta">
+                          <span class="chip chip-tomorrow">Amanhã</span>
+                        </div>
+                      </div>
+                      <div class="subject-right">
+                        <span class="badge badge-ok">0</span>
+                        <span class="chev">›</span>
+                      </div>
+                    </a>
+
+                    <a href="/subject/physicalEducation/" class="subject-card physical-education">
+                      <div class="subject-left">
+                        <div class="subject-name">Educação Física</div>
+                        <div class="subject-meta">
+                          <span class="chip chip-today">Hoje</span>
+                        </div>
+                      </div>
+                      <div class="subject-right">
+                        <span class="badge badge-warn">1</span>
+                        <span class="chev">›</span>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+            <div class="mural-section" data-section="pedagogia">
+              <div class="section-title">
+                <span class="section-line"></span>
+                <span class="section-text">Pedagogia</span>
+              </div>
+
+            <a href="/subject/warnings/" class="subject-card warning">
+                <div class="subject-left">
+                <div class="subject-name">Avisos</div>
+                <div class="subject-meta"></div>
+                </div>
+                <div class="subject-right">
+                <span class="badge badge-warn">2</span>
+                <span class="chev">›</span>
+                </div>
+            </a>
+          </div>
+        </div>
+        <br><br>
+        </div>
+
+        <div class="toolbar toolbar-bottom">
+          <div class="toolbar-inner display-flex">
+            <a href="/link2/" class="tab-link link active">
+              <i class="ri-file-copy-2-fill"></i>
+              <span>Mural</span>
+            </a>
+            <a href="/home/" class="tab-link link">
+              <i class="ri-home-9-fill"></i>
+              <span>Home</span>
+            </a>
+            <a href="/link3/" class="tab-link link">
+              <i class="mdi mdi-calendar-month"></i>
+              <span>Calendário</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+  <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+  <script type="text/javascript" src="js/routes.js"></script>
+  <script src="cordova.js"></script>
+</body>
+
+</html>

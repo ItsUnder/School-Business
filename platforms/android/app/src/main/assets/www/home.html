@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#2196f3">
+  <title>School Business</title>
+
+  <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/materialdesignicons.min.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="view view-main">
+      <div data-name="home" class="page color-theme-blue">
+
+        <div class="navbar">
+          <div class="navbar-bg"></div>
+          <div class="navbar-inner">
+            <div class="title">
+              <img src="./img/menuLogo.png" class="menuLogo" id="homeLogo">
+            </div>
+
+            <a href="/profile/" class="userProfile link">
+              <div class="userProfile">
+                <span class="username"><span class="userName"></span></span>
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="User Avatar"
+                  class="userAvatar userAvatarEl">
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="page-content" id="pageContentHome">
+
+          <div class="home-header block">
+            <div class="home-hello">
+              <div class="home-title">Bem-vindo(a), <span class="userName"></span></div>
+              <div class="home-subtitle">Aqui estão suas aulas e materiais mais recentes.</div>
+            </div>
+
+            <div class="home-stats">
+              <div class="stat-pill">
+                <span class="mdi mdi-bell-outline"></span>
+                <span>2 avisos</span>
+              </div>
+              <div class="stat-pill">
+                <span class="mdi mdi-clipboard-text-outline"></span>
+                <span>3 atividades</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="display-flex align-items-center justify-content-space-between">
+            <h2 class="subtitle">Categorias</h2>
+          </div>
+
+          <div class="swiper swiperCategories">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <button class="filter-btn-active" data-filter="todas">
+                  <span class="mdi mdi-view-grid-outline"></span> Todas
+                </button>
+              </div>
+
+              <div class="swiper-slide">
+                <button class="filter-btn" data-filter="atividades">
+                  <span class="mdi mdi-clipboard-text-outline"></span> Atividades
+                </button>
+              </div>
+
+              <div class="swiper-slide">
+                <button class="filter-btn" data-filter="aulas">
+                  <span class="mdi mdi-school-outline"></span> Aulas
+                </button>
+              </div>
+
+              <div class="swiper-slide">
+                <button class="filter-btn" data-filter="materiais">
+                  <span class="mdi mdi-book-open-variant"></span> Materiais
+                </button>
+              </div>
+
+              <div class="swiper-slide">
+                <button class="filter-btn" data-filter="podcasts">
+                  <span class="mdi mdi-podcast"></span> Podcasts
+                </button>
+              </div>
+
+              <div class="swiper-slide">
+                <button class="filter-btn" data-filter="avisos">
+                  <span class="mdi mdi-bell-outline"></span> Avisos
+                </button>
+              </div>
+
+              <div class="swiper-slide">
+                <button class="filter-btn" data-filter="eventos">
+                  <span class="mdi mdi-calendar-month-outline"></span> Eventos
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-title">
+            <span class="section-line"></span>
+            <span class="section-text">Recentes</span>
+          </div>
+
+          <div id="recente" class="row compact-feed">
+
+            <a href="/topics/math/funcoesAfins/" class="feed-card feed-lesson" data-category="aulas">
+              <div class="feed-icon">
+                <span class="mdi mdi-function"></span>
+              </div>
+              <div class="feed-body">
+                <div class="feed-top">
+                  <span class="feed-title">Funções Afins (1º grau)</span>
+                  <span class="feed-chip">Aula</span>
+                </div>
+                <div class="feed-meta">
+                  <span class="feed-tag">
+                    <span class="mdi mdi-school-outline"></span> Matemática
+                  </span>
+                  <span class="feed-time">
+                    <span class="mdi mdi-clock-outline"></span> 2 dias atrás
+                  </span>
+                </div>
+              </div>
+              <div class="feed-right">
+                <span class="mdi mdi-chevron-right"></span>
+              </div>
+            </a>
+
+            <a href="/topics/math/geometria/" class="feed-card feed-lesson" data-category="aulas">
+              <div class="feed-icon">
+                <span class="mdi mdi-ruler-square"></span>
+              </div>
+              <div class="feed-body">
+                <div class="feed-top">
+                  <span class="feed-title">Geometria Básica</span>
+                  <span class="feed-chip">Aula</span>
+                </div>
+                <div class="feed-meta">
+                  <span class="feed-tag">
+                    <span class="mdi mdi-school-outline"></span> Matemática
+                  </span>
+                  <span class="feed-time">
+                    <span class="mdi mdi-clock-outline"></span> 3 dias atrás
+                  </span>
+                </div>
+              </div>
+              <div class="feed-right">
+                <span class="mdi mdi-chevron-right"></span>
+              </div>
+            </a>
+
+            <a href="/topics/math/equacoes2/" class="feed-card feed-lesson" data-category="aulas">
+              <div class="feed-icon">
+                <span class="mdi mdi-math-integral-box"></span>
+              </div>
+              <div class="feed-body">
+                <div class="feed-top">
+                  <span class="feed-title">Equações do 2º grau</span>
+                  <span class="feed-chip">Aula</span>
+                </div>
+                <div class="feed-meta">
+                  <span class="feed-tag">
+                    <span class="mdi mdi-school-outline"></span> Matemática
+                  </span>
+                  <span class="feed-time">
+                    <span class="mdi mdi-clock-outline"></span> 1 semana atrás
+                  </span>
+                </div>
+              </div>
+              <div class="feed-right">
+                <span class="mdi mdi-chevron-right"></span>
+              </div>
+            </a>
+
+            <a href="/topics/portuguese/interpretacao/" class="feed-card feed-lesson" data-category="aulas">
+              <div class="feed-icon">
+                <span class="mdi mdi-book-open-page-variant"></span>
+              </div>
+              <div class="feed-body">
+                <div class="feed-top">
+                  <span class="feed-title">Interpretação de Texto</span>
+                  <span class="feed-chip">Aula</span>
+                </div>
+                <div class="feed-meta">
+                  <span class="feed-tag">
+                    <span class="mdi mdi-school-outline"></span> Português
+                  </span>
+                  <span class="feed-time">
+                    <span class="mdi mdi-clock-outline"></span> 1 semana atrás
+                  </span>
+                </div>
+              </div>
+              <div class="feed-right">
+                <span class="mdi mdi-chevron-right"></span>
+              </div>
+            </a>
+
+            <a href="/topics/portuguese/figurasLinguagem/" class="feed-card feed-lesson" data-category="aulas">
+              <div class="feed-icon">
+                <span class="mdi mdi-format-quote-close"></span>
+              </div>
+              <div class="feed-body">
+                <div class="feed-top">
+                  <span class="feed-title">Figuras de Linguagem</span>
+                  <span class="feed-chip">Aula</span>
+                </div>
+                <div class="feed-meta">
+                  <span class="feed-tag">
+                    <span class="mdi mdi-school-outline"></span> Português
+                  </span>
+                  <span class="feed-time">
+                    <span class="mdi mdi-clock-outline"></span> 2 semanas atrás
+                  </span>
+                </div>
+              </div>
+              <div class="feed-right">
+                <span class="mdi mdi-chevron-right"></span>
+              </div>
+            </a>
+
+            <a href="/topics/writing/dissertativoArg/" class="feed-card feed-warning" data-category="atividades">
+              <div class="feed-icon">
+                <span class="mdi mdi-pencil-outline"></span>
+              </div>
+              <div class="feed-body">
+                <div class="feed-top">
+                  <span class="feed-title">Dissertativo Argumentativo</span>
+                  <span class="feed-chip">Atividade</span>
+                </div>
+                <div class="feed-meta">
+                  <span class="feed-tag">
+                    <span class="mdi mdi-school-outline"></span> Redação
+                  </span>
+                  <span class="feed-time">
+                    <span class="mdi mdi-clock-outline"></span> 2 semanas atrás
+                  </span>
+                </div>
+              </div>
+              <div class="feed-right">
+                <span class="mdi mdi-chevron-right"></span>
+              </div>
+            </a>
+
+            <a href="#" class="feed-card feed-podcast open-link" data-category="podcasts"
+              data-url="https://open.spotify.com/search/redacao%20enem">
+              <div class="feed-icon">
+                <span class="mdi mdi-podcast"></span>
+              </div>
+              <div class="feed-body">
+                <div class="feed-top">
+                  <span class="feed-title">Podcast — Redação ENEM</span>
+                  <span class="feed-chip">Podcast</span>
+                </div>
+                <div class="feed-meta">
+                  <span class="feed-tag">
+                    <span class="mdi mdi-spotify"></span> Spotify
+                  </span>
+                  <span class="feed-time">
+                    <span class="mdi mdi-clock-outline"></span> 3 semanas atrás
+                  </span>
+                </div>
+              </div>
+              <div class="feed-right">
+                <span class="mdi mdi-open-in-new"></span>
+              </div>
+            </a>
+
+            <a href="#" class="feed-card feed-lesson open-link" data-category="materiais"
+              data-url="https://daffy.ufs.br/uploads/page_attach/path/8822/Roteiro_de_estudos_VI-classes_de_palavras.pdf">
+              <div class="feed-icon">
+                <span class="mdi mdi-file-document-outline"></span>
+              </div>
+              <div class="feed-body">
+                <div class="feed-top">
+                  <span class="feed-title">Classes de Palavras (PDF)</span>
+                  <span class="feed-chip">Material</span>
+                </div>
+                <div class="feed-meta">
+                  <span class="feed-tag">
+                    <span class="mdi mdi-school-outline"></span> INEP
+                  </span>
+                  <span class="feed-time">
+                    <span class="mdi mdi-clock-outline"></span> 1 mês atrás
+                  </span>
+                </div>
+              </div>
+              <div class="feed-right">
+                <span class="mdi mdi-open-in-new"></span>
+              </div>
+            </a>
+
+          </div>
+
+          <div style="height: 120px;"></div>
+        </div>
+
+        <div class="toolbar toolbar-bottom">
+          <div class="toolbar-inner display-flex">
+            <a href="/link2/" class="tab-link link">
+              <i class="ri-file-copy-2-fill"></i>
+              <span>Mural</span>
+            </a>
+            <a href="/home/" class="tab-link link active">
+              <i class="ri-home-9-fill"></i>
+              <span>Home</span>
+            </a>
+            <a href="/link3/" class="tab-link link">
+              <i class="mdi mdi-calendar-month"></i>
+              <span>Calendário</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+  <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+  <script type="text/javascript" src="js/routes.js"></script>
+  <script type="text/javascript" src="js/userSession.js"></script>
+  <script type="text/javascript" src="js/links.js"></script>
+  <script src="cordova.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>School Business</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/personalizado.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page -->
+            <div data-name="link2" class="page">
+
+                <div class="navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                        <div class="title">
+                            <img src="./img/menuLogo.png" class="menuLogo" id="homeLogo">
+                        </div>
+
+                        <a href="/profile/" class="userProfile link">
+                            <div class="userProfile">
+                                <span class="username"><span class="userName"></span></span>
+                                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="User Avatar"
+                                    class="userAvatar userAvatarEl">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="subject-header geography">
+                        <div class="subject-header-content">
+                            <h2>Geografia</h2>
+                            <p>Espaço geográfico, sociedade e meio ambiente</p>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <span class="label">Professor</span>
+                                <span class="value">Ricardo Mendes</span>
+                            </div>
+                            <div class="info-card">
+                                <span class="label">Horário</span>
+                                <span class="value">Seg & Qui</span>
+                            </div>
+                            <div class="info-card">
+                                <span class="label">Sala</span>
+                                <span class="value">210</span>
+                            </div>
+                            <div class="info-card">
+                                <span class="label">Nota atual</span>
+                                <span class="value">16.90</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-title">
+                        <span class="section-line"></span>
+                        <span class="section-text">Conteúdos</span>
+                    </div>
+
+                    <div class="list links-list card-list">
+                        <ul>
+                            <li>
+                                <a href="/topics/geography/cartografia/" class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">🗺️ Cartografia e escalas</div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/topics/geography/globalizacao/" class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">🌐 Globalização</div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/topics/geography/geopolitica/" class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">🌍 Geopolítica mundial</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="section-title">
+                        <span class="section-line"></span>
+                        <span class="section-text">Atividades</span>
+                    </div>
+
+                    <div class="assignment-card">
+                        <h4>Mapa Conceitual: Globalização</h4>
+                        <p>Entrega até <strong>23/03</strong></p>
+                        <span class="status pending">Pendente</span>
+                    </div>
+
+                    <div class="assignment-card">
+                        <h4>Prova — Geopolítica</h4>
+                        <p>Data: <strong>30/03</strong></p>
+                        <span class="status exam">Avaliação</span>
+                    </div>
+
+                    <div class="section-title">
+                        <span class="section-line"></span>
+                        <span class="section-text">Materiais</span>
+                    </div>
+
+                    <div class="list links-list material-list">
+                        <ul>
+                            <li><a href="#">📄 Atlas Geográfico (PDF)</a></li>
+                            <li><a href="#">🎥 Aula: Globalização e economia</a></li>
+                            <li><a href="#">🧭 Mapas temáticos comentados</a></li>
+                        </ul>
+                    </div>
+
+                    <br>
+                    <br>
+                </div>
+
+                <div class="toolbar toolbar-bottom">
+                    <div class="toolbar-inner display-flex">
+                        <a href="/link2/" class="tab-link link active">
+                            <i class="ri-file-copy-2-fill"></i>
+                            <span>Mural</span>
+                        </a>
+                        <a href="/home/" class="tab-link link">
+                            <i class="ri-home-9-fill"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="/link3/" class="tab-link link">
+                            <i class="mdi mdi-calendar-month"></i>
+                            <span>Calendário</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="cordova.js"></script>
+</body>
+
+</html>

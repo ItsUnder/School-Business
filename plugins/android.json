@@ -1,0 +1,43 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-file": {
+      "ANDROIDX_WEBKIT_VERSION": "1.4.0",
+      "PACKAGE_NAME": "br.com.curso.schoolbusiness"
+    },
+    "cordova-plugin-filepath": {
+      "PACKAGE_NAME": "br.com.curso.schoolbusiness"
+    },
+    "cordova-plugin-camera": {
+      "ANDROIDX_CORE_VERSION": "1.6.+",
+      "PACKAGE_NAME": "br.com.curso.schoolbusiness"
+    },
+    "cordova-plugin-crop": {
+      "PACKAGE_NAME": "br.com.curso.schoolbusiness"
+    },
+    "cordova-plugin-file-opener2": {
+      "PACKAGE_NAME": "br.com.curso.schoolbusiness"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "br.com.curso.schoolbusiness"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "br.com.curso.schoolbusiness"
+    },
+    "cordova-plugin-local-notification": {
+      "ANDROIDX_CORE_VERSION": "1.12.0",
+      "PACKAGE_NAME": "br.com.curso.schoolbusiness"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "br.com.curso.schoolbusiness"
+    }
+  }
+}
