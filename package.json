@@ -1,0 +1,42 @@
+{
+  "name": "br.com.curso.schoolbusiness",
+  "displayName": "SchoolBusiness",
+  "version": "1.0.0",
+  "description": "A platform for educations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-file": {
+        "ANDROIDX_WEBKIT_VERSION": "1.4.0"
+      },
+      "cordova-plugin-filepath": {},
+      "cordova-plugin-camera": {
+        "ANDROIDX_CORE_VERSION": "1.6.+"
+      },
+      "cordova-plugin-crop": {},
+      "cordova-plugin-file-opener2": {},
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-local-notification": {
+        "ANDROIDX_CORE_VERSION": "1.12.0"
+      }
+    }
+  },
+  "devDependencies": {
+    "br.com.curso.greentech": "file:android",
+    "cordova-android": "^14.0.1",
+    "cordova-plugin-device": "^3.0.0",
+    "cordova-plugin-local-notification": "^1.2.3"
+  }
+}

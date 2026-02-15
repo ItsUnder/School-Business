@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="br.com.curso.schoolbusiness" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>School Business</name>
+    <description>
+        App feito como estudo
+    </description>
+    <author email="matheusmarianoe@gmail.com" href="https://cordova.apache.org">
+        Matheus Mariano
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <platform name="android">
+        <preference name="AndroidWindowSplashScreenBackgroundColor" value="#200B34" />
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/splashIcon.png" />
+        <preference name="AndroidWindowSplashScreenIconBackgroundColor" value="#200B34" />
+        <preference name="BackgroundColor" value="#200B34" />
+        <preference name="SplashScreenBackgroundColor" value="#200B34" />
+        <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
+        <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
+        <icon density="hdpi" src="resources/android/icon/drawable-hdpi-icon.png" />
+        <icon density="xhdpi" src="resources/android/icon/drawable-xhdpi-icon.png" />
+        <icon density="xxhdpi" src="resources/android/icon/drawable-xxhdpi-icon.png" />
+        <icon density="xxxhdpi" src="resources/android/icon/drawable-xxxhdpi-icon.png" />
+    </platform>
+    <access origin="*" />
+    <allow-navigation href="*" />
+</widget>

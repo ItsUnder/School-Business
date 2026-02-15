@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#2196f3">
+    <title>School Business</title>
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <link rel="stylesheet" href="css/personalizado.css">
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="view view-main">
+            <div data-name="portuguese" class="page">
+
+            <div class="navbar">
+                <div class="navbar-bg"></div>
+                <div class="navbar-inner">
+                    <div class="title">
+                    <img src="./img/menuLogo.png" class="menuLogo" id="homeLogo">
+                    </div>
+
+                    <a href="/profile/" class="userProfile link">            
+                        <div class="userProfile">
+                            <span class="username"><span class="userName"></span></span>
+                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="User Avatar" class="userAvatar userAvatarEl">
+                        </div>
+                    </a>
+                </div>   
+            </div>
+
+                <div class="page-content">
+                    <div class="subject-header portuguese">
+                        <div class="subject-header-content">
+                            <h2>Português</h2>
+                            <p>Leitura, interpretação, gramática e produção textual</p>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <span class="label">Professor</span>
+                                <span class="value">Ana Martins</span>
+                            </div>
+                            <div class="info-card">
+                                <span class="label">Horário</span>
+                                <span class="value">Ter & Qui</span>
+                            </div>
+                            <div class="info-card">
+                                <span class="label">Sala</span>
+                                <span class="value">109</span>
+                            </div>
+                            <div class="info-card">
+                                <span class="label">Nota atual</span>
+                                <span class="value">16,40</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-title">
+                        <span class="section-line"></span>
+                        <span class="section-text">Conteúdos</span>
+                    </div>
+
+                    <div class="list links-list card-list">
+                        <ul>
+                            <li>
+                                <a href="/topics/portuguese/interpretacao/" class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">📖 Interpretação de Texto</div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/topics/portuguese/classesGramaticais/" class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">🧠 Classes Gramaticais</div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/topics/portuguese/figurasLinguagem/" class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">📚 Figuras de Linguagem</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="section-title">
+                        <span class="section-line"></span>
+                        <span class="section-text">Atividades</span>
+                    </div>
+
+                    <div class="assignment-card assignment-upload" id="ptProducaoCard">
+                    <h4>Produção de Texto — Artigo de Opinião</h4>
+                    <p>Entrega até <strong>22/03</strong></p>
+                    <span class="status pending" id="ptProducaoStatus">Pendente</span>
+                    </div>
+
+                    <input id="ptProducaoFile" type="file" style="display:none"
+                    accept=".pdf,.doc,.docx,.txt,image/*,application/pdf" />
+
+
+                    <div class="assignment-card">
+                        <h4>Simulado — Interpretação</h4>
+                        <p>Data: <strong>26/03</strong></p>
+                        <span class="status exam">Avaliação</span>
+                    </div>
+
+                    <div class="assignment-card">
+                        <h4>Leitura Orientada</h4>
+                        <p>Capítulos: <strong>1 a 3</strong></p>
+                        <span class="status pending">Pendente</span>
+                    </div>
+
+                    <div class="section-title">
+                        <span class="section-line"></span>
+                        <span class="section-text">Materiais</span>
+                    </div>
+
+                    <div class="list links-list material-list">
+                        <ul>
+                            <li>
+                                <a href="#" class="item-content open-pdf" data-pdf="pdfs/portuguese/gramaticaCompleta.pdf">
+                                    <div class="item-media">
+                                        <span class="mdi mdi-file-document-multiple"></span>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Apostila – Gramática Essencial (PDF)</div>
+                                        <div class="item-after">Abrir</div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="item-content open-video" data-popup="#video-popup" data-yt="k3A8uX9cWmE">
+                                    <div class="item-media">
+                                        <span class="mdi mdi-video"></span>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Vídeo aula – Interpretação: técnicas rápidas</div>
+                                        <div class="item-after">Assistir</div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="item-content open-pdf" data-pdf="pdfs/portuguese/modeloRedacao.pdf">
+                                    <div class="item-media">
+                                        <span class="mdi mdi-text-box-check-outline"></span>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Modelo de Redação – Estrutura + repertório (PDF)</div>
+                                        <div class="item-after">Abrir</div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="item-content open-pdf" data-pdf="pdfs/portuguese/ortografiaAcentuacao.pdf">
+                                    <div class="item-media">
+                                        <span class="mdi mdi-spellcheck"></span>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Ortografia e Acentuação – Guia rápido (PDF)</div>
+                                        <div class="item-after">Abrir</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <br><br><br>
+                </div>
+
+                <div class="toolbar toolbar-bottom">
+                    <div class="toolbar-inner display-flex">
+                        <a href="/link2/" class="tab-link link active">
+                            <i class="ri-file-copy-2-fill"></i>
+                            <span>Mural</span>
+                        </a>
+                        <a href="/home/" class="tab-link link">
+                            <i class="ri-home-9-fill"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="/link3/" class="tab-link link">
+                            <i class="mdi mdi-calendar-month"></i>
+                            <span>Calendário</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="popup" id="video-popup">
+                    <div class="view">
+                        <div class="page">
+                        <div class="navbar">
+                            <div class="navbar-bg"></div>
+                            <div class="navbar-inner">
+                                <div class="title">
+                                <img src="./img/menuLogo.png" class="menuLogo" id="homeLogo">
+                                </div>
+
+                                    <a href="/profile/" class="userProfile link">            
+                                        <div class="userProfile">
+                                            <span class="username"><span class="userName"></span></span>
+                                            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="User Avatar" class="userAvatar userAvatarEl">
+                                        </div>
+                                    </a>
+                            </div>   
+                        </div>
+                            <div class="page-content">
+                                <div class="block">
+                                    <div class="video-wrap">
+                                        <iframe id="yt" src="" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="js/routes.js"></script>
+
+    <script src="cordova.js"></script>
+</body>
+
+</html>

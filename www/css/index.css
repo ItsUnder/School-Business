@@ -1,0 +1,2610 @@
+:root {
+    --white: #ffff;
+    --ice: #d6f6fc;
+    --purple: #200B34;
+    --orange: #de580d;
+    --bg1: #160622;
+    --bg2: #200B34;
+    --bg3: #2e0f46;
+    --glass: rgba(255,255,255,0.08);
+    --glass2: rgba(255,255,255,0.12);
+    --stroke: rgba(255,255,255,0.16);
+    --text: rgba(255,255,255,0.92);
+    --muted: rgba(255,255,255,0.70);
+    --shadow: 0 18px 50px rgba(0,0,0,0.35);
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html {
+  margin: 0;
+  padding: 0; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body.theme-dark{
+  --page-bg: #0f0618;
+  --card-bg: rgba(255,255,255,0.08);
+  --text-main: rgba(255,255,255,0.92);
+  --text-muted: rgba(255,255,255,0.70);
+}
+
+.toolbar{
+    height: 80px;
+}
+
+#menuLogo {
+    max-width: 8rem;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+
+.loginPopup{
+  width: min(92vw, 390px);
+  height: auto;
+  padding: 18px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, var(--glass2), var(--glass));
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transform: translate(-50%, -50%);
+  animation: popIn .45s cubic-bezier(.2,.9,.2,1) both;
+}
+
+.loginPopup::after{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(222,88,13,0.55), rgba(214,246,252,0.18), rgba(255,255,255,0.08));
+  filter: blur(14px);
+  opacity: .55;
+  z-index:-1;
+}
+
+@keyframes popIn{
+  from{ opacity:0; transform: translate(-50%, -45%) scale(.98); }
+  to{ opacity:1; transform: translate(-50%, -50%) scale(1); }
+}
+
+.backgroundPopup{
+  background: transparent;
+  padding: 6px;
+}
+
+.loginBrand{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.loginLogo{
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.14);
+  padding: 8px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.22);
+}
+
+.loginHeadline{
+  display:flex;
+  flex-direction:column;
+  gap: 3px;
+  min-width:0;
+}
+
+.kicker{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  color: rgba(214,246,252,0.85);
+}
+
+.tab-link{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+#pageContentLogin::before{
+  content:"";
+  position:absolute;
+  inset:-30%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.10), transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.06), transparent 45%);
+  filter: blur(20px);
+  animation: floatGlow 9s ease-in-out infinite;
+  pointer-events:none;
+}
+
+#pageContentLogin{
+  background:
+    radial-gradient(1200px 800px at 15% 10%, rgba(222,88,13,0.35), transparent 60%),
+    radial-gradient(900px 700px at 90% 30%, rgba(214,246,252,0.18), transparent 55%),
+    radial-gradient(700px 700px at 50% 90%, rgba(222,88,13,0.18), transparent 60%),
+    linear-gradient(160deg, var(--bg1), var(--bg2) 45%, var(--bg3));
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes floatGlow{
+  0%{ transform: translate3d(-2%, -1%, 0) scale(1); opacity: .85; }
+  50%{ transform: translate3d(2%, 1%, 0) scale(1.02); opacity: 1; }
+  100%{ transform: translate3d(-2%, -1%, 0) scale(1); opacity: .85; }
+}
+
+.titlePopup{
+  margin:0;
+  text-align:left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--text);
+}
+
+input[type="email"], input[type="password"], input[type="name"]{
+    border: 2px solid #ccc; 
+    border-radius: 2px;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    color: rgba(214,246,252,0.85);
+}
+.loginFields{
+  display:flex;
+  flex-direction:column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.fieldWrap{
+  display:flex;
+  flex-direction:column;
+  gap: 6px;
+}
+.subTitlePopup{
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--muted);
+  letter-spacing: .2px;
+}
+.inputWrap{
+  position:relative;
+}
+.inputWrap i{
+  position:absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: rgba(214,246,252,0.85);
+  opacity: .9;
+  pointer-events:none;
+}
+
+.fieldLogin{
+  width: 100%;
+  box-sizing: border-box;
+
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 14px;
+
+  padding: 12px 12px 12px 40px; 
+  color: var(--text);
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 14px;
+
+  outline: none;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease, box-shadow .12s ease;
+}
+.fieldLogin::placeholder{
+  color: rgba(255,255,255,0.45);
+}
+
+
+.fieldLogin:focus{
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(222,88,13,0.70);
+  box-shadow: 0 0 0 4px rgba(222,88,13,0.22);
+  transform: translateY(-1px);
+}
+
+
+.loginActions{
+  margin-top: 16px;
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  align-items: stretch;
+}
+.loginBtn{
+  width: 100%;
+  border: 0;
+  border-radius: 16px;
+  padding: 12px 14px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 10px;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: .2px;
+
+  color: #fff;
+  background: linear-gradient(135deg, rgba(222,88,13,1), rgba(255,138,64,1));
+  box-shadow: 0 14px 26px rgba(222,88,13,0.30);
+
+  position: relative;
+  overflow: hidden;
+
+  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+}
+
+.loginBtn i{
+  font-size: 18px;
+}
+
+.loginBtn::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.40), transparent 35%);
+  transform: translateX(-30%);
+  opacity: .55;
+  transition: transform .35s ease;
+}
+
+.loginBtn:active{
+  transform: scale(0.99);
+  filter: brightness(0.98);
+  box-shadow: 0 10px 18px rgba(222,88,13,0.26);
+}
+
+.loginBtn:hover::before{
+  transform: translateX(15%);
+}
+
+
+.toggleLink{
+  text-align:center;
+  text-decoration:none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 13px;
+  color: rgba(214,246,252,0.92);
+  padding: 10px 10px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.toggleLink b{
+  color: #fff;
+}
+
+.toggleLink:active{
+  transform: scale(0.99);
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(255,255,255,0.18);
+}
+
+
+.loginFoot{
+  margin-top: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 8px;
+}
+
+.loginFoot .dot{
+  width: 7px;
+  height: 7px;
+  border-radius: 99px;
+  background: rgba(214,246,252,0.85);
+  box-shadow: 0 0 0 6px rgba(214,246,252,0.10);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse{
+  0%,100%{ transform: scale(1); opacity: .85; }
+  50%{ transform: scale(1.15); opacity: 1; }
+}
+
+.loginFoot .muted{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+}
+
+
+.page[data-name="index"] .navbar-bg{
+  background: rgba(32, 11, 52, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+.navbar {
+  height: 72px; 
+}
+
+.navbar-bg{
+  background: rgb(32, 11, 52);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.28);
+}
+
+
+.navbar-inner{
+  height: 72px;
+  padding: 0 14px;
+}
+
+
+#homeLogo{
+  max-width: 6.4rem;
+  margin: 0;
+  filter:
+    drop-shadow(0 6px 14px rgba(0,0,0,0.35))
+    drop-shadow(0 0 18px rgba(222,88,13,0.18));
+  transform: translateY(1px);
+}
+
+
+a.userProfile.link{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 8px 10px;
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    0 10px 18px rgba(0,0,0,0.20);
+
+  transition: transform .12s ease, background .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+
+
+a.userProfile.link:active{
+  transform: scale(0.99);
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.12),
+    0 8px 14px rgba(0,0,0,0.18);
+}
+
+
+.userProfile{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 0;
+}
+
+
+.username{
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .2px;
+  color: rgba(255,255,255,0.92);
+
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+}
+
+
+.userAvatar{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  object-fit: cover;
+
+  border: 1px solid rgba(255,255,255,0.22);
+  box-shadow:
+    0 10px 18px rgba(0,0,0,0.26),
+    0 0 0 4px rgba(255,255,255,0.06);
+}
+
+
+a.userProfile.link:active .userAvatar{
+  box-shadow:
+    0 8px 14px rgba(0,0,0,0.22),
+    0 0 0 4px rgba(222,88,13,0.14);
+}
+
+
+.page-content{
+  padding-top: 72px; 
+}
+
+
+.loginPopup{
+  background-color: transparent; 
+  position: fixed;
+  top: 50%; left: 50%;
+}
+
+/* acessibilidade: reduz animações */
+@media (prefers-reduced-motion: reduce){
+  #pageContentLogin::before,
+  .loginPopup,
+  .loginBtn::before,
+  .loginFoot .dot{
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+#homeLogo {
+    max-width: 6rem;
+    margin-top: 0.5rem;
+    margin-left: 10px;
+}
+
+#pageContentHome {
+    background-color: whitesmoke;
+}
+
+.userAvatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.5rem;
+}
+
+.username {
+    font-size: 0.6rem;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 0.4rem;
+}
+
+
+.userProfile {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.swiper-slide img {
+      display: block;
+      width: 100%;
+      max-width: 470px;
+      height: auto;
+      object-fit: cover;
+      min-width: 40%;
+}
+
+.swiperCategories {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.toolbar-bottom {
+    background-color: var(--purple);
+    height: 4rem;
+}
+
+.toolbar-inner .link{    
+    flex:1;
+    height: 80px;  
+    line-height: 25px; 
+	font-weight:bold;
+    color: var(--orange)
+}
+
+.toolbar-inner .link:not(.active){
+    color:gray;
+	font-weight:normal;
+}
+
+.toolbar-inner > .link i{
+    font-size: 28px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    margin-bottom: 0;
+}
+
+.seeAll {
+    color: var(--orange);
+    margin-right: 1rem;
+}
+
+.filter-btn {
+    background: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 30px;
+    min-width: 20px;
+    max-width: 150px;
+}
+
+.filter-btn-active {
+    background: var(--orange);
+    border-radius: 10px;
+    color: white;
+    border: 2px solid var(--orange);
+    height: 30px;
+    min-width: 20px;
+    max-width: 150px;
+}
+
+.row {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item {
+    color: black;
+}
+
+.itemCard {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    flex: 45%;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.imgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+}
+
+.imgFluid {
+    max-width: 10rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+#recente {
+    margin-left: 0.8rem;
+}
+
+
+.itemTitle {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.itemDiscipline {
+    margin-top: 0;
+    margin-left: 0.2rem;
+    font-size: 0.8rem;
+    color: rgb(60, 106, 114);
+    font-weight: 600;
+}
+
+.itemDate {
+    font-size: 0.8rem;
+    color: rgb(60, 106, 114);
+}
+
+.itemCategory {
+    text-align: end;
+    font-weight: 600;
+}
+
+@media (min-width: 992px) {
+    .itemCard {
+        flex:30%;
+    }
+}
+
+.subject-header {
+    height: 50px;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    color: #fff;
+}
+
+.subject-header.math { background: linear-gradient(135deg, #43A047, #2E7D32); }
+.subject-header.portuguese { background: linear-gradient(135deg, #3949AB, #283593); }
+.subject-header.writing { background: linear-gradient(135deg, #8E24AA, #5E35B1); }
+.subject-header.literature { background: linear-gradient(135deg, #6A1B9A, #4A148C); }
+.subject-header.history { background: linear-gradient(135deg, #6D4C41, #4E342E); }
+.subject-header.geography { background: linear-gradient(135deg, #00897B, #00695C); }
+.subject-header.biology { background: linear-gradient(135deg, #2E7D32, #1B5E20); }
+.subject-header.chemistry { background: linear-gradient(135deg, #EF6C00, #E65100); }
+.subject-header.physics { background: linear-gradient(135deg, #5E35B1, #4527A0); }
+.subject-header.english { background: linear-gradient(135deg, #1E88E5, #1565C0); }
+.subject-header.art { background: linear-gradient(135deg, #D81B60, #AD1457); }
+.subject-header.physical-education { background: linear-gradient(135deg, #00838F, #006064); }
+.subject-header.philosophy { background: linear-gradient(135deg, #455A64, #263238); }
+.subject-header.sociology { background: linear-gradient(135deg, #5D4037, #3E2723); }
+.subject-header.warning { background: linear-gradient(135deg, #c0c240, #3E2723); }
+
+
+.subject-header-content h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.subject-header-content p {
+    margin: 4px 0 0;
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.info-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.info-card .label {
+    display: block;
+    font-size: 12px;
+    color: #888;
+}
+
+.info-card .value {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    margin: 24px 16px 12px;
+}
+
+.section-line {
+    width: 4px;
+    height: 22px;
+    background-color: #200B34;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.section-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #200B34;
+}
+
+.card-list ul li {
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    padding: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.assignment-card {
+    background: #fff;
+    margin: 0 16px 12px;
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.assignment-card h4 {
+    margin: 0 0 6px;
+}
+
+.assignment-card p {
+    margin: 0 0 8px;
+    font-size: 14px;
+}
+
+.status {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status.pending {
+    background: #FFF3CD;
+    color: #856404;
+}
+
+.status.exam {
+    background: #F8D7DA;
+    color: #842029;
+}
+
+.material-list a {
+    font-weight: 500;
+}
+
+.topic-header {
+  margin: 16px;
+  padding: 18px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(76, 175, 80, 0.18),
+    rgba(46, 125, 50, 0.08)
+  );
+  border: 1px solid rgba(46, 125, 50, 0.2);
+}
+
+.topic-header h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.topic-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #444;
+}
+
+.material-list .item-media {
+  font-size: 18px;
+}
+
+.exercise-list li {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  padding: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.note-card {
+  margin: 0 16px 24px;
+  padding: 16px;
+  background: #fff8e1;
+  border-left: 6px solid #ffc107;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #5d4b00;
+}
+
+.subject-list ul {
+  margin: 0;
+  padding: 0;
+}
+
+.subject-list li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.subject-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 14px;
+  border-radius: 16px;
+
+  text-decoration: none;
+  color: #fff;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+
+  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+}
+
+.subject-card:active {
+  transform: scale(0.99);
+  filter: brightness(0.96);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.10);
+}
+
+.subject-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subject-name {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.subject-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+
+  padding: 4px 10px;
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.20);
+  border: 1px solid rgba(255,255,255,0.24);
+  color: #fff;
+}
+
+.chip-today {
+  background: rgba(255,255,255,0.24);
+}
+
+.chip-tomorrow {
+  background: rgba(0,0,0,0.18);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.subject-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  min-width: 28px;
+  height: 22px;
+  padding: 0 8px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.badge-warn {
+  background: rgba(255,255,255,0.92);
+  color: #5d3a00;
+}
+
+.badge-ok {
+  background: rgba(255,255,255,0.28);
+  color: #fff;
+}
+
+.chev {
+  font-size: 24px;
+  font-weight: 900;
+  opacity: 0.9;
+}
+
+.subject-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(0,0,0,0.10));
+  pointer-events: none;
+}
+
+.subject-card.math { background: linear-gradient(135deg, #43A047, #2E7D32); }
+.subject-card.portuguese { background: linear-gradient(135deg, #3949AB, #283593); }
+.subject-card.writing { background: linear-gradient(135deg, #8E24AA, #5E35B1); }
+.subject-card.literature { background: linear-gradient(135deg, #6A1B9A, #4A148C); }
+
+.subject-card.history { background: linear-gradient(135deg, #6D4C41, #4E342E); }
+.subject-card.geography { background: linear-gradient(135deg, #00897B, #00695C); }
+
+.subject-card.biology { background: linear-gradient(135deg, #2E7D32, #1B5E20); }
+.subject-card.chemistry { background: linear-gradient(135deg, #EF6C00, #E65100); }
+.subject-card.physics { background: linear-gradient(135deg, #5E35B1, #4527A0); }
+
+.subject-card.english { background: linear-gradient(135deg, #1E88E5, #1565C0); }
+.subject-card.art { background: linear-gradient(135deg, #D81B60, #AD1457); }
+.subject-card.physical-education { background: linear-gradient(135deg, #00838F, #006064); }
+
+.subject-card.philosophy { background: linear-gradient(135deg, #455A64, #263238); }
+.subject-card.sociology { background: linear-gradient(135deg, #5D4037, #3E2723); }
+.subject-card.warning { background: linear-gradient(135deg, #c0c240, #3E2723); }
+
+.category-title {
+  margin: 28px 12px 12px;
+  display: flex;
+  align-items: center;
+}
+
+.category-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+.category-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(0,0,0,0.12);
+  margin-left: 12px;
+}
+
+.swiperCategoriesMural {
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+
+.video-wrap{
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+}
+.video-wrap iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.exercise-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.exercise-left{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.exercise-left .mdi{
+  font-size: 20px;
+}
+
+.exercise-text{
+  color: #000;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.exercise-grade{
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.grade-ok{
+  color: #2E7D32;
+}
+
+.grade-low{
+  color: #E65100;
+}
+
+.grade-pending{
+  color: #777;
+}
+
+.icon-success{
+  color: #4CAF50;
+}
+
+.icon-warning{
+  color: #C62828;
+}
+
+:root {
+  --white: #ffff;
+  --ice: #d6f6fc;
+  --purple: #200B34;
+  --orange: #de580d;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.toolbar {
+  height: 80px;
+}
+
+
+#homeLogo {
+  max-width: 6rem;
+  margin-top: 0.5rem;
+  margin-left: 10px;
+}
+
+#pageContentHome {
+  background-color: whitesmoke;
+}
+
+.userAvatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
+.username {
+  font-size: 0.6rem;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 0.4rem;
+}
+
+
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.toolbar-bottom {
+  background-color: var(--purple);
+  height: 4rem;
+}
+
+.toolbar-inner .link {
+  flex: 1;
+  height: 80px;
+  line-height: 25px;
+  font-weight: bold;
+  color: var(--orange)
+}
+
+.toolbar-inner .link:not(.active) {
+  color: gray;
+  font-weight: normal;
+}
+
+.toolbar-inner>.link i {
+  font-size: 28px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+.seeAll {
+  color: var(--orange);
+  margin-right: 1rem;
+}
+
+.swiperCategories {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-btn,
+.filter-btn-active {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  height: 34px;
+  padding: 0 12px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.filter-btn {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+.filter-btn-active {
+  background: var(--orange);
+  color: white;
+  border: 2px solid var(--orange);
+}
+
+.filter-btn .mdi,
+.filter-btn-active .mdi {
+  font-size: 18px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  margin: 18px 16px 12px;
+}
+
+.section-line {
+  width: 4px;
+  height: 22px;
+  background-color: #200B34;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.section-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #200B34;
+}
+
+.home-header {
+  margin: 12px 12px 0;
+  padding: 14px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.home-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #111;
+}
+
+.home-subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 13px;
+  color: #666;
+  margin-top: 3px;
+}
+
+.home-stats {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(32, 11, 52, 0.06);
+  border: 1px solid rgba(32, 11, 52, 0.12);
+  color: var(--purple);
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.stat-pill .mdi {
+  font-size: 18px;
+}
+
+.row {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.compact-feed {
+  margin: 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feed-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px;
+  border-radius: 16px;
+
+  background: #fff;
+  text-decoration: none;
+  color: #111;
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
+}
+
+.feed-card:active {
+  transform: scale(0.99);
+  filter: brightness(0.98);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.feed-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 42px;
+}
+
+.feed-icon .mdi {
+  font-size: 22px;
+}
+
+.feed-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.feed-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.feed-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.feed-chip {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.06);
+  white-space: nowrap;
+}
+
+.feed-meta {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+
+.feed-tag,
+.feed-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.feed-meta .mdi {
+  font-size: 16px;
+}
+
+.feed-right {
+  flex: 0 0 auto;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.feed-right .mdi {
+  font-size: 26px;
+}
+
+.feed-lesson .feed-icon {
+  background: rgba(67, 160, 71, 0.14);
+  color: #2E7D32;
+}
+
+.feed-podcast .feed-icon {
+  background: rgba(57, 73, 171, 0.14);
+  color: #283593;
+}
+
+.feed-warning .feed-icon {
+  background: rgba(255, 152, 0, 0.16);
+  color: #E65100;
+}
+.userProfile.link{
+  color: inherit;
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 14px;
+}
+
+.userProfile.link:active{
+  background: rgba(255,255,255,0.10);
+  transform: scale(0.99);
+}
+
+#pageContentProfile{
+  background: whitesmoke;
+}
+
+.profile-card{
+  margin: 12px 12px 0;
+  padding: 14px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+.profile-top{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-avatar{
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.profile-identity{
+  min-width: 0;
+  flex: 1;
+}
+
+.profile-name{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  color: #111;
+  line-height: 1.1;
+}
+
+.profile-email{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-badges{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.profile-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 10px;
+  border-radius: 999px;
+
+  background: rgba(32, 11, 52, 0.06);
+  border: 1px solid rgba(32, 11, 52, 0.12);
+  color: var(--purple);
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.profile-badge.soft{
+  background: rgba(222, 88, 13, 0.10);
+  border-color: rgba(222, 88, 13, 0.18);
+  color: #7a2c05;
+}
+
+.profile-stats{
+  margin: 12px 12px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.profile-stat{
+  background: #fff;
+  border-radius: 16px;
+  padding: 12px 10px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.stat-num{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--purple);
+}
+
+.stat-label{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  color: #666;
+  margin-top: 3px;
+  font-weight: 700;
+}
+
+.profile-section-title{
+  margin-top: 20px;
+}
+
+.profile-list{
+  margin: 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 12px;
+  border-radius: 16px;
+
+  background: #fff;
+  text-decoration: none;
+  color: #111;
+
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
+}
+
+.profile-item:active{
+  transform: scale(0.99);
+  filter: brightness(0.98);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.pi-left{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex: 1;
+}
+
+.pi-icon{
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: rgba(32, 11, 52, 0.06);
+  color: var(--purple);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 42px;
+}
+
+.pi-icon .mdi{
+  font-size: 22px;
+}
+
+.pi-text{
+  min-width: 0;
+}
+
+.pi-title{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.pi-sub{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  color: #666;
+  margin-top: 3px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pi-right{
+  color: rgba(0,0,0,0.45);
+}
+
+.pi-right .mdi{
+  font-size: 26px;
+}
+
+.profile-item.danger .pi-icon{
+  background: rgba(198, 40, 40, 0.10);
+  color: #C62828;
+}
+
+.profile-item.danger .pi-title{
+  color: #C62828;
+}
+
+.profileAction .mdi{
+  font-size: 22px;
+  color: var(--orange);
+}
+
+#pageContentProfileEdit{
+  background: whitesmoke;
+}
+
+.profile-edit-card{
+  margin: 0 12px 12px;
+}
+
+.profile-form{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-field .pf-label{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--purple);
+  margin-bottom: 6px;
+}
+
+.profile-field .pf-label .mdi{
+  font-size: 18px;
+}
+
+.profile-field input{
+  width: 100%;
+  background: var(--ice);
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 10px;
+  padding: 10px 12px;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.pf-hint{
+  margin-top: 6px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+
+.profile-save{
+  width: 100%;
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+#pageContentProfileEdit .profile-field input{
+  width: 100%;
+  box-sizing: border-box;
+
+
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.90));
+  border: 1px solid rgba(0,0,0,0.14);
+  border-radius: 14px;
+
+  padding: 12px 12px;
+  color: #121212;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.85),
+    0 10px 18px rgba(0,0,0,0.05);
+
+  outline: none;
+  transition: transform .14s ease, border-color .14s ease, box-shadow .14s ease, background .14s ease;
+}
+
+#pageContentProfileEdit .profile-field input::placeholder{
+  color: rgba(0,0,0,0.42);
+  font-weight: 600;
+}
+
+
+#pageContentProfileEdit .profile-field input:focus{
+  background: #fff;
+  border-color: rgba(222,88,13,0.55);
+  box-shadow:
+    0 0 0 4px rgba(222,88,13,0.14),
+    0 14px 28px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+
+#pageContentProfileEdit .profile-field input:not(:placeholder-shown){
+  border-color: rgba(32,11,52,0.18);
+}
+
+
+#pageContentProfileEdit .profile-field input:invalid{
+  border-color: rgba(198,40,40,0.35);
+}
+
+
+#pageContentProfileEdit .profile-field .pf-label{
+  margin-bottom: 8px;
+  letter-spacing: .2px;
+}
+
+
+#pageContentProfileEdit .pf-hint{
+  line-height: 1.35;
+  opacity: 0.92;
+}
+
+
+#pageContentProfileEdit .profile-card.profile-edit-card:focus-within{
+  box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+  transition: transform .14s ease, box-shadow .14s ease;
+}
+
+#pageContentProfile{
+  background: var(--page-bg);
+}
+
+.profile-card,
+.profile-stat,
+.profile-item{
+  background: var(--card-bg);
+  color: var(--text-main);
+}
+
+.pi-sub,
+.profile-email,
+.stat-label{
+  color: var(--text-muted);
+}
+
+.assignment-upload{
+  cursor: pointer;
+}
+
+.status.sent{
+  background: rgba(76, 175, 80, 0.18);
+  color: #2E7D32;
+}
+
+
+.subject-list .mural-section .subject-card{
+  display: flex;         
+  margin: 0 0 12px;
+}
+
+.subject-list .mural-section{
+  margin-bottom: 18px;
+}
+
+.subject-list .mural-section .category-title{
+  margin: 22px 12px 12px; 
+}
+
+
+
+.swiperCategoriesMural .swiper-slide,
+.swiperCategories .swiper-slide{
+  width: auto;
+}
+
+.swiperCategoriesMural .filter-btn,
+.swiperCategoriesMural .filter-btn-active,
+.swiperCategories .filter-btn,
+.swiperCategories .filter-btn-active{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  padding: 0 12px;
+  max-width: 240px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.swiperCategoriesMural .filter-btn .mdi,
+.swiperCategoriesMural .filter-btn-active .mdi,
+.swiperCategories .filter-btn .mdi,
+.swiperCategories .filter-btn-active .mdi{
+  flex: 0 0 auto;
+}
+
+.swiperCategoriesMural .filter-text,
+.swiperCategories .filter-text{
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+/* =========================================================
+   CALENDAR REDESIGN (LIGHT + DARK)
+   - Colar NO FINAL do CSS
+   - Ativa na página: .calendar-page
+   ========================================================= */
+
+/* --------- TOKENS (modo claro por padrão) --------- */
+.calendar-page{
+  /* fundo / cards */
+  --cal-bg: #f6f7fb;
+  --cal-bg2: #ffffff;
+  --cal-card: rgba(255,255,255,0.92);
+  --cal-stroke: rgba(0,0,0,0.10);
+  --cal-shadow: 0 16px 40px rgba(0,0,0,0.10);
+
+  /* texto */
+  --cal-text: rgba(0,0,0,0.88);
+  --cal-muted: rgba(0,0,0,0.55);
+
+  /* acentos */
+  --cal-accent: var(--orange);
+  --cal-accent-weak: rgba(222,88,13,0.14);
+
+  /* avisos */
+  --cal-warn: #de580d;
+  --cal-act: #FFC107;
+  --cal-exam: #C62828;
+
+  /* pills */
+  --cal-pill-bg: rgba(0,0,0,0.04);
+  --cal-pill-border: rgba(0,0,0,0.10);
+
+  background:
+    radial-gradient(900px 600px at 10% 10%, rgba(222,88,13,0.14), transparent 60%),
+    radial-gradient(800px 600px at 90% 20%, rgba(32,11,52,0.08), transparent 60%),
+    linear-gradient(180deg, var(--cal-bg), #ffffff);
+  color: var(--cal-text);
+}
+
+body.theme-dark .calendar-page{
+  --cal-bg: #0f0618;
+  --cal-bg2: #140822;
+  --cal-card: rgba(255,255,255,0.08);
+  --cal-stroke: rgba(255,255,255,0.14);
+  --cal-shadow: 0 18px 50px rgba(0,0,0,0.35);
+
+  --cal-text: rgba(255,255,255,0.92);
+  --cal-muted: rgba(255,255,255,0.70);
+
+  --cal-pill-bg: rgba(255,255,255,0.08);
+  --cal-pill-border: rgba(255,255,255,0.14);
+
+  background:
+    radial-gradient(1200px 800px at 15% 10%, rgba(222,88,13,0.28), transparent 60%),
+    radial-gradient(900px 700px at 90% 30%, rgba(214,246,252,0.14), transparent 55%),
+    linear-gradient(160deg, var(--bg1), var(--bg2) 45%, var(--bg3));
+  color: var(--cal-text);
+}
+
+.calendar-page .page-content{
+  padding-top: 72px;
+  padding-bottom: 110px;
+}
+
+.calendar-page .cal-hero{
+  margin: 12px 12px 12px;
+  padding: 14px 14px 12px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(32,11,52,0.96), rgba(46,15,70,0.92));
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.18);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+body:not(.theme-dark) .calendar-page .cal-hero{
+  background:
+    linear-gradient(135deg, rgba(32,11,52,0.98), rgba(46,15,70,0.92));
+}
+
+.calendar-page .cal-hero::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(222,88,13,0.35), transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(214,246,252,0.20), transparent 45%),
+    radial-gradient(circle at 60% 85%, rgba(222,88,13,0.18), transparent 55%);
+  filter: blur(22px);
+  opacity: .9;
+  pointer-events:none;
+}
+
+.calendar-page .cal-hero-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.calendar-page .cal-title{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: .2px;
+}
+
+.calendar-page .cal-subtitle{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  opacity: .85;
+  margin-top: 4px;
+}
+
+.calendar-page .cal-actions{
+  display:flex;
+  gap: 8px;
+}
+
+.calendar-page .cal-icon-btn{
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
+  color:#fff;
+}
+
+.calendar-page .cal-icon-btn .mdi{
+  font-size: 20px;
+}
+
+.calendar-page .cal-legend{
+  display:flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.calendar-page .cal-pill{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.calendar-page .dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.10);
+}
+
+.calendar-page .dot-warning{ background: var(--cal-warn); }
+.calendar-page .dot-activity{ background: var(--cal-act); }
+.calendar-page .dot-exam{ background: var(--cal-exam); }
+
+.calendar-page .cal-card{
+  margin: 0 12px 12px;
+  background: var(--cal-card);
+  border: 1px solid var(--cal-stroke);
+  border-radius: 18px;
+  box-shadow: var(--cal-shadow);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.calendar-page .cal-card-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 12px 12px;
+  border-bottom: 1px solid var(--cal-stroke);
+  background: rgba(0,0,0,0.03);
+}
+
+body.theme-dark .calendar-page .cal-card-head{
+  background: rgba(0,0,0,0.14);
+}
+
+.calendar-page .month-nav{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  color: var(--cal-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 900;
+}
+
+.calendar-page .month-btn{
+  width: 36px;
+  height: 36px;
+  border-radius: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: var(--cal-pill-bg);
+  border: 1px solid var(--cal-pill-border);
+  color: var(--cal-text);
+}
+
+.calendar-page .month-btn .mdi{ font-size: 20px; }
+
+.calendar-page .cal-grid{
+  padding: 12px 12px 14px;
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-page .dow{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  color: var(--cal-muted);
+  text-align:center;
+  letter-spacing: .3px;
+}
+
+.calendar-page .day{
+  aspect-ratio: 1/1;
+  border-radius: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--cal-text);
+
+  border: 1px solid var(--cal-stroke);
+  background: rgba(0,0,0,0.02);
+  user-select:none;
+}
+
+body.theme-dark .calendar-page .day{
+  background: rgba(255,255,255,0.06);
+}
+
+.calendar-page .day.muted{
+  opacity: .38;
+}
+
+.calendar-page .day.today{
+  background: linear-gradient(135deg, rgba(222,88,13,1), rgba(255,138,64,1));
+  border: 1px solid rgba(255,255,255,0.22);
+  color: #fff;
+  box-shadow: 0 14px 24px rgba(222,88,13,0.26);
+}
+
+.calendar-page .day.selected{
+  box-shadow: 0 0 0 4px var(--cal-accent-weak);
+  border-color: rgba(222,88,13,0.55);
+}
+
+.calendar-page .marks{
+  position:absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  display:flex;
+  gap: 4px;
+}
+
+.calendar-page .mark{
+  width: 6px;
+  height: 6px;
+  border-radius: 99px;
+  background: rgba(0,0,0,0.25);
+}
+
+body.theme-dark .calendar-page .mark{
+  background: rgba(255,255,255,0.35);
+}
+
+.calendar-page .mark.warn{ background: var(--cal-warn); }
+.calendar-page .mark.exam{ background: var(--cal-exam); }
+.calendar-page .mark.act{ background: var(--cal-act); }
+
+.calendar-page .cal-section-title{
+  margin: 18px 16px 10px;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+
+.calendar-page .cal-section-title .line{
+  width: 4px;
+  height: 22px;
+  border-radius: 4px;
+  background: rgba(32,11,52,0.35);
+}
+
+body.theme-dark .calendar-page .cal-section-title .line{
+  background: rgba(255,255,255,0.22);
+}
+
+.calendar-page .cal-section-title .text{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--cal-text);
+}
+
+.calendar-page .agenda{
+  margin: 0 12px;
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+}
+
+.calendar-page .agenda-item{
+  display:flex;
+  align-items:flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 18px;
+  background: var(--cal-card);
+  border: 1px solid var(--cal-stroke);
+  box-shadow: var(--cal-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.calendar-page .time-col{
+  flex: 0 0 62px;
+  text-align:left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.calendar-page .time{
+  font-weight: 900;
+  color: var(--cal-text);
+  font-size: 13px;
+}
+
+.calendar-page .duration{
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--cal-muted);
+  font-weight: 800;
+}
+
+.calendar-page .event-body{
+  flex: 1;
+  min-width: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.calendar-page .event-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 10px;
+}
+
+.calendar-page .event-title{
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--cal-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calendar-page .tag{
+  font-size: 11px;
+  font-weight: 900;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--cal-pill-border);
+  background: var(--cal-pill-bg);
+  color: var(--cal-text);
+  white-space: nowrap;
+}
+
+.calendar-page .event-meta{
+  margin-top: 6px;
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--cal-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.calendar-page .event-meta span{
+  display:inline-flex;
+  align-items:center;
+  gap: 6px;
+}
+
+.calendar-page .event-meta .mdi{
+  font-size: 16px;
+  opacity: .92;
+}
+
+.calendar-page .bar{
+  position:absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  border-radius: 18px 0 0 18px;
+}
+
+.calendar-page .c-math { background: linear-gradient(180deg, #43A047, #2E7D32); }
+.calendar-page .c-portuguese { background: linear-gradient(180deg, #3949AB, #283593); }
+.calendar-page .c-writing { background: linear-gradient(180deg, #8E24AA, #5E35B1); }
+.calendar-page .c-history { background: linear-gradient(180deg, #6D4C41, #4E342E); }
+.calendar-page .c-chemistry { background: linear-gradient(180deg, #EF6C00, #E65100); }
+.calendar-page .c-biology { background: linear-gradient(180deg, #2E7D32, #1B5E20); }
+.calendar-page .c-english { background: linear-gradient(180deg, #1E88E5, #1565C0); }
+
+.calendar-page .badge-flag{
+  display:inline-flex;
+  align-items:center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+  border: 1px solid var(--cal-pill-border);
+  background: var(--cal-pill-bg);
+  color: var(--cal-text);
+  width: fit-content;
+}
+
+.calendar-page .badge-flag.warning{
+  border-color: rgba(222,88,13,0.35);
+  background: rgba(222,88,13,0.12);
+}
+
+.calendar-page .badge-flag.exam{
+  border-color: rgba(198,40,40,0.35);
+  background: rgba(198,40,40,0.12);
+}
+
+.calendar-page .badge-flag.activity{
+  border-color: rgba(255,193,7,0.35);
+  background: rgba(255,193,7,0.12);
+}
+
+
+body.theme-dark{
+  color-scheme: dark;
+  --page-bg: #0f0618;
+  --card-bg: rgba(255,255,255,0.08);
+  --card-border: rgba(255,255,255,0.14);
+  --text-main: rgba(255,255,255,0.92);
+  --text-muted: rgba(255,255,255,0.70);
+  --text-faint: rgba(255,255,255,0.45);
+  --line: rgba(255,255,255,0.16);
+  --shadow-dark: 0 18px 50px rgba(0,0,0,0.35);
+
+  background: var(--page-bg);
+  color: var(--text-main);
+}
+
+body.theme-dark #pageContentHome,
+body.theme-dark #pageContentProfile,
+body.theme-dark #pageContentProfileEdit,
+body.theme-dark .page-content{
+  background: var(--page-bg) !important;
+}
+
+body.theme-dark .home-header,
+body.theme-dark .feed-card,
+body.theme-dark .profile-card,
+body.theme-dark .profile-stat,
+body.theme-dark .profile-item,
+body.theme-dark .assignment-card,
+body.theme-dark .info-card,
+body.theme-dark .exercise-row,
+body.theme-dark .exercise-list li,
+body.theme-dark .card-list ul li,
+body.theme-dark .topic-header,
+body.theme-dark .note-card{
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  box-shadow: var(--shadow-dark) !important;
+  color: var(--text-main) !important;
+}
+
+body.theme-dark .home-title,
+body.theme-dark .profile-name,
+body.theme-dark .pi-title,
+body.theme-dark .feed-title,
+body.theme-dark .exercise-text,
+body.theme-dark .item,
+body.theme-dark .itemTitle,
+body.theme-dark .subject-header-content h2,
+body.theme-dark .topic-header h2{
+  color: var(--text-main) !important;
+}
+
+body.theme-dark .home-subtitle,
+body.theme-dark .feed-meta,
+body.theme-dark .feed-right,
+body.theme-dark .profile-email,
+body.theme-dark .pi-sub,
+body.theme-dark .stat-label,
+body.theme-dark .info-row,
+body.theme-dark .topic-header p,
+body.theme-dark .info-card .label,
+body.theme-dark .itemDiscipline,
+body.theme-dark .itemDate,
+body.theme-dark .subject-header-content p{
+  color: var(--text-muted) !important;
+}
+
+body.theme-dark .filter-btn{
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid var(--line) !important;
+  color: var(--text-main) !important;
+}
+
+body.theme-dark .filter-btn-active{
+  color: #fff !important;
+}
+
+body.theme-dark .category-title::after{
+  background: rgba(255,255,255,0.16) !important;
+}
+
+body.theme-dark .section-text,
+body.theme-dark .category-text{
+  color: var(--text-main) !important;
+}
+
+body.theme-dark .stat-pill,
+body.theme-dark .profile-badge{
+  background: rgba(255,255,255,0.10) !important;
+  border: 1px solid rgba(255,255,255,0.14) !important;
+  color: var(--text-main) !important;
+}
+
+body.theme-dark .pi-icon{
+  background: rgba(255,255,255,0.10) !important;
+  color: var(--text-main) !important;
+}
+
+body.theme-dark .feed-chip{
+  background: rgba(255,255,255,0.10) !important;
+  color: var(--text-main) !important;
+}
+
+body.theme-dark .profile-field input,
+body.theme-dark #pageContentProfileEdit .profile-field input,
+body.theme-dark input[type="email"],
+body.theme-dark input[type="password"],
+body.theme-dark input[type="name"],
+body.theme-dark input,
+body.theme-dark textarea,
+body.theme-dark select{
+  background: rgba(255,255,255,0.10) !important;
+  color: var(--text-main) !important;
+  border: 1px solid rgba(255,255,255,0.16) !important;
+  box-shadow: none !important;
+}
+
+body.theme-dark input::placeholder,
+body.theme-dark textarea::placeholder{
+  color: var(--text-faint) !important;
+}
+
+body.theme-dark .exercise-text{
+  color: var(--text-main) !important;
+}
+
+body.theme-dark .imgContainer{
+  background: rgba(255,255,255,0.08) !important;
+  border: 1px solid rgba(255,255,255,0.14) !important;
+}
+
+body.theme-dark a,
+body.theme-dark .seeAll{
+  color: rgba(214,246,252,0.92);
+}
+
+body.theme-dark .toolbar-inner .link:not(.active){
+  color: rgba(255,255,255,0.65) !important;
+}
+
+body.theme-dark .block,
+body.theme-dark .list,
+body.theme-dark .item-content,
+body.theme-dark .item-inner{
+  color: var(--text-main);
+}
+
+body.theme-dark .profile-stat{
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  box-shadow: var(--shadow-dark) !important;
+}
+
+body.theme-dark .stat-num{
+  color: var(--text-main) !important;
+}
+
+body.theme-dark .stat-label{
+  color: var(--text-muted) !important;
+}
+
+body.theme-dark #pageContentProfileEdit{
+  background: var(--page-bg) !important;
+}
+
+body.theme-dark #pageContentProfileEdit .profile-card{
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  box-shadow: var(--shadow-dark) !important;
+  color: var(--text-main) !important;
+}
+
+body.theme-dark #pageContentProfileEdit .profile-name{
+  color: var(--text-main) !important;
+}
+body.theme-dark #pageContentProfileEdit .profile-email{
+  color: var(--text-muted) !important;
+}
+
+body.theme-dark #pageContentProfileEdit .profile-badge{
+  background: rgba(255,255,255,0.10) !important;
+  border: 1px solid rgba(255,255,255,0.14) !important;
+  color: var(--text-main) !important;
+}
+body.theme-dark #pageContentProfileEdit .profile-badge.soft{
+  background: rgba(255,255,255,0.08) !important;
+  border: 1px solid rgba(255,255,255,0.14) !important;
+  color: var(--text-main) !important;
+}
+
+body.theme-dark #pageContentProfileEdit .profile-field .pf-label{
+  color: var(--text-main) !important;
+}
+
+body.theme-dark #pageContentProfileEdit .pf-hint{
+  color: var(--text-muted) !important;
+}
+
+body.theme-dark #pageContentProfileEdit .profile-field input{
+  background: rgba(255,255,255,0.10) !important;
+  color: var(--text-main) !important;
+  border: 1px solid rgba(255,255,255,0.16) !important;
+  box-shadow: none !important;
+}
+
+body.theme-dark #pageContentProfileEdit .profile-field input::placeholder{
+  color: rgba(255,255,255,0.45) !important;
+}
+
+body.theme-dark #pageContentProfileEdit .profile-field input:focus{
+  background: rgba(255,255,255,0.14) !important;
+  border-color: rgba(222,88,13,0.70) !important;
+  box-shadow: 0 0 0 4px rgba(222,88,13,0.22) !important;
+}
+
+body.theme-dark #pageContentProfileEdit .section-text{
+  color: var(--text-main) !important;
+}
+body.theme-dark #pageContentProfileEdit .section-line{
+  background: rgba(255,255,255,0.20) !important;
+}
+
+body.theme-dark .pi-right{
+  color: rgb(255, 255, 255);
+}
+
+body.theme-dark .page-content{
+  background: var(--page-bg) !important;
+  color: var(--text-main) !important;
+}
+
+body.theme-dark .list,
+body.theme-dark .links-list,
+body.theme-dark .card-list,
+body.theme-dark .material-list{
+  color: var(--text-main) !important;
+}
+
+body.theme-dark .list ul li,
+body.theme-dark .links-list ul li{
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+}
+
+body.theme-dark .list a,
+body.theme-dark .links-list a,
+body.theme-dark a.item-content{
+  color: var(--text-main) !important;
+}
+
+body.theme-dark .item-title,
+body.theme-dark .item-inner,
+body.theme-dark .item-content,
+body.theme-dark .item-title-row,
+body.theme-dark .item-subtitle,
+body.theme-dark .item-text{
+  color: var(--text-main) !important;
+}
+
+body.theme-dark .item-after{
+  color: var(--text-muted) !important;
+}
+
+body.theme-dark .item-media,
+body.theme-dark .item-media .mdi{
+  color: var(--text-main) !important;
+  opacity: .92;
+}
+
+body.theme-dark .list ul::before,
+body.theme-dark .list ul::after,
+body.theme-dark .list li::before,
+body.theme-dark .list li::after{
+  background-color: rgba(255,255,255,0.12) !important;
+}
+
+body.theme-dark .section-text{
+  color: var(--text-main) !important;
+}
+body.theme-dark .section-line{
+  background: rgba(255,255,255,0.20) !important;
+}
+
+body.theme-dark .info-card{
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  color: var(--text-main) !important;
+}
+body.theme-dark .info-card .label{ color: var(--text-muted) !important; }
+body.theme-dark .info-card .value{ color: var(--text-main) !important; }
+
+body.theme-dark .page[data-name="link2"] .page-content{
+  background: var(--page-bg) !important;
+}
+
+body.theme-dark .page[data-name="link2"] .list ul::before,
+body.theme-dark .page[data-name="link2"] .list ul::after,
+body.theme-dark .page[data-name="link2"] .list li::before,
+body.theme-dark .page[data-name="link2"] .list li::after,
+body.theme-dark .page[data-name="link2"] .item-inner::before,
+body.theme-dark .page[data-name="link2"] .item-inner::after,
+body.theme-dark .page[data-name="link2"] .item-content::before,
+body.theme-dark .page[data-name="link2"] .item-content::after{
+  background-color: transparent !important;
+}
+
+body.theme-dark .page[data-name="link2"] .subject-list ul > li{
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.theme-dark .page[data-name="link2"] .block{
+  background: transparent !important;
+}
+
+
+body.theme-dark .page[data-name="link2"] .filter-btn{
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid var(--line) !important;
+  color: var(--text-main) !important;
+}

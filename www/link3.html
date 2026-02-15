@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#2196f3">
+
+  <title>School Business</title>
+
+  <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+  <link rel="stylesheet" href="css/personalizado.css">
+  <link rel="stylesheet" href="css/materialdesignicons.min.css">
+
+    
+</head>
+
+<body class="theme-dark">
+  <div id="app">
+    <div class="view view-main">
+      <div data-name="link3" class="page calendar-page">
+
+        <div class="navbar">
+          <div class="navbar-bg"></div>
+          <div class="navbar-inner">
+            <div class="title">
+              <img src="./img/menuLogo.png" class="menuLogo" id="homeLogo">
+            </div>
+
+            <a href="/profile/" class="userProfile link">
+              <div class="userProfile">
+                <span class="username"><span class="userName"></span></span>
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="User Avatar"
+                  class="userAvatar userAvatarEl">
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="page-content">
+
+          <div class="cal-hero">
+            <div class="cal-hero-top">
+              <div>
+                <h2 class="cal-title">Calendário do Estudante</h2>
+                <div class="cal-subtitle">Visão do mês e agenda do dia</div>
+              </div>
+
+              <div class="cal-actions">
+                <div class="cal-icon-btn" title="Pesquisar">
+                  <span class="mdi mdi-magnify"></span>
+                </div>
+                <div class="cal-icon-btn" title="Filtros">
+                  <span class="mdi mdi-filter-variant"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cal-legend">
+              <span class="cal-pill"><span class="dot dot-warning"></span> Avisos</span>
+              <span class="cal-pill"><span class="dot dot-activity"></span> Atividades</span>
+              <span class="cal-pill"><span class="dot dot-exam"></span> Provas</span>
+            </div>
+          </div>
+
+          <div class="cal-card">
+            <div class="cal-card-head">
+              <div class="month-nav">
+                <div class="month-btn"><span class="mdi mdi-chevron-left"></span></div>
+                <span>Janeiro • 2026</span>
+                <div class="month-btn"><span class="mdi mdi-chevron-right"></span></div>
+              </div>
+              <div class="month-btn" title="Hoje"><span class="mdi mdi-calendar-today"></span></div>
+            </div>
+
+            <div class="cal-grid">
+              <div class="dow">D</div><div class="dow">S</div><div class="dow">T</div><div class="dow">Q</div><div class="dow">Q</div><div class="dow">S</div><div class="dow">S</div>
+
+              <div class="day muted">29</div>
+              <div class="day muted">30</div>
+              <div class="day muted">31</div>
+              <div class="day">1</div>
+              <div class="day">2</div>
+              <div class="day">3</div>
+              <div class="day">4</div>
+
+              <div class="day">5</div>
+              <div class="day">6</div>
+              <div class="day">7</div>
+              <div class="day">8</div>
+              <div class="day">9</div>
+              <div class="day">10</div>
+              <div class="day">11</div>
+
+              <div class="day">12</div>
+              <div class="day">13</div>
+              <div class="day">14</div>
+              <div class="day">15</div>
+              <div class="day">16</div>
+              <div class="day">17</div>
+              <div class="day">18</div>
+
+              <div class="day">19</div>
+              <div class="day">20</div>
+              <div class="day">21</div>
+              <div class="day">22</div>
+              <div class="day">23</div>
+              <div class="day">24</div>
+              <div class="day">25</div>
+
+              <div class="day today">
+                26
+                <div class="marks">
+                  <span class="mark act"></span>
+                  <span class="mark exam"></span>
+                </div>
+              </div>
+
+              <div class="day">27</div>
+              <div class="day">
+                28
+                <div class="marks">
+                  <span class="mark warn"></span>
+                </div>
+              </div>
+              <div class="day">29</div>
+              <div class="day">30</div>
+              <div class="day">31</div>
+              <div class="day muted">1</div>
+            </div>
+          </div>
+
+          <div class="cal-section-title">
+            <span class="line"></span>
+            <span class="text">Agenda • Hoje</span>
+          </div>
+
+          <div class="agenda">
+
+            <div class="agenda-item">
+              <span class="bar c-math"></span>
+              <div class="time-col">
+                <div class="time">07:10</div>
+                <div class="duration">50 min</div>
+              </div>
+
+              <div class="event-body">
+                <div class="event-top">
+                  <div class="event-title">Matemática — Funções (revisão)</div>
+                  <span class="tag">Aula</span>
+                </div>
+
+                <div class="event-meta">
+                  <span><span class="mdi mdi-map-marker-outline"></span> Sala 12</span>
+                  <span><span class="mdi mdi-account-outline"></span> Prof. André</span>
+                </div>
+
+                <div class="badge-flag activity">
+                  <span class="mdi mdi-clipboard-text-outline"></span>
+                  Atividade: Lista 3 (entrega hoje)
+                </div>
+              </div>
+            </div>
+
+            <div class="agenda-item">
+              <span class="bar c-portuguese"></span>
+              <div class="time-col">
+                <div class="time">08:10</div>
+                <div class="duration">50 min</div>
+              </div>
+
+              <div class="event-body">
+                <div class="event-top">
+                  <div class="event-title">Português — Interpretação de Texto</div>
+                  <span class="tag">Aula</span>
+                </div>
+
+                <div class="event-meta">
+                  <span><span class="mdi mdi-map-marker-outline"></span> Sala 05</span>
+                  <span><span class="mdi mdi-book-open-variant"></span> Cap. 7</span>
+                </div>
+
+                <div class="badge-flag warning">
+                  <span class="mdi mdi-bell-outline"></span>
+                  Aviso: trazer livro e caderno
+                </div>
+              </div>
+            </div>
+
+            <div class="agenda-item">
+              <span class="bar c-chemistry"></span>
+              <div class="time-col">
+                <div class="time">09:10</div>
+                <div class="duration">50 min</div>
+              </div>
+
+              <div class="event-body">
+                <div class="event-top">
+                  <div class="event-title">Química — Ligações Químicas</div>
+                  <span class="tag">Prova</span>
+                </div>
+
+                <div class="event-meta">
+                  <span><span class="mdi mdi-map-marker-outline"></span> Sala 08</span>
+                  <span><span class="mdi mdi-timer-outline"></span> 09:10–10:00</span>
+                </div>
+
+                <div class="badge-flag exam">
+                  <span class="mdi mdi-alert-circle-outline"></span>
+                  Prova: ligações iônicas e covalentes
+                </div>
+              </div>
+            </div>
+
+            <div class="agenda-item">
+              <span class="bar c-history"></span>
+              <div class="time-col">
+                <div class="time">10:10</div>
+                <div class="duration">50 min</div>
+              </div>
+
+              <div class="event-body">
+                <div class="event-top">
+                  <div class="event-title">História — Brasil Colônia</div>
+                  <span class="tag">Aula</span>
+                </div>
+
+                <div class="event-meta">
+                  <span><span class="mdi mdi-map-marker-outline"></span> Sala 03</span>
+                  <span><span class="mdi mdi-file-document-outline"></span> Resumo no caderno</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="agenda-item">
+              <span class="bar c-writing"></span>
+              <div class="time-col">
+                <div class="time">11:10</div>
+                <div class="duration">50 min</div>
+              </div>
+
+              <div class="event-body">
+                <div class="event-top">
+                  <div class="event-title">Redação — Estrutura Dissertativa</div>
+                  <span class="tag">Aula</span>
+                </div>
+
+                <div class="event-meta">
+                  <span><span class="mdi mdi-pencil-outline"></span> Tema: tecnologia</span>
+                  <span><span class="mdi mdi-clock-outline"></span> rascunho em sala</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div style="height: 24px;"></div>
+        </div>
+
+        <div class="toolbar toolbar-bottom">
+          <div class="toolbar-inner display-flex">
+            <a href="/link2/" class="tab-link link">
+              <i class="ri-file-copy-2-fill"></i>
+              <span>Mural</span>
+            </a>
+            <a href="/home/" class="tab-link link">
+              <i class="ri-home-9-fill"></i>
+              <span>Home</span>
+            </a>
+            <a href="/link3/" class="tab-link link active">
+              <i class="mdi mdi-calendar-month"></i>
+              <span>Calendário</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+  <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+  <script type="text/javascript" src="js/routes.js"></script>
+  <script src="cordova.js"></script>
+</body>
+
+</html>
