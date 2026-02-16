@@ -59,8 +59,7 @@ convertidas em um aplicativo nativo.
   <li>Caso você queira, baixe o app versão Android no seu celular! <a href="https://drive.google.com/file/d/1bYMA41wJI2uXn-AGhzxpMznHuW_tcMi2/view?usp=sharing">Clique aqui!</a>
     (Importante que a opção de baixar APKs de terceiros esteja ligado).
     </li>
-  <li><strong>Vídeo do YouTube: 
-    [![Apresentação do APP](https://img.youtube.com/vi/sX2PQgTOyt4BPLWM/0.jpg)](https://www.youtube.com/watch?v=sX2PQgTOyt4BPLWM)
+  <li><strong>Vídeo do YouTube: <a href="https://youtube.com/shorts/n48VxFDQ9ho?si=yc3xqxiyPL9tPuG5">Clique aqui!</a>
 </ul>
 
 <hr>
