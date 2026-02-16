@@ -1,6 +1,5 @@
-<!-- README - School Business -->
 
-<h1>School Business</h1>
+<h1 align="center">School Business</h1>
 
 <p>
 O <strong>School Business</strong> é uma plataforma EdTech criada para transformar
