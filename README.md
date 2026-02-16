@@ -60,7 +60,7 @@ convertidas em um aplicativo nativo.
     (Importante que a opção de baixar APKs de terceiros esteja ligado).
     </li>
   <li><strong>Vídeo do YouTube: 
-    (https://img.youtube.com/vi/sX2PQgTOyt4BPLWM/maxresdefault.jpg)](https://www.youtube.com/watch?v=sX2PQgTOyt4BPLWM)
+    [![Demo](https://img.youtube.com/vi/sX2PQgTOyt4BPLWM/maxresdefault.jpg)](https://www.youtube.com/watch?v=sX2PQgTOyt4BPLWM)
 </ul>
 
 <hr>
