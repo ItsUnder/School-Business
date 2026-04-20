@@ -10,7 +10,7 @@ em um único espaço, simplificando processos escolares e aumentando o engajamen
 
 <hr>
 
-<h2>🎓 Contexto Acadêmico</h2>
+<h2>Contexto Acadêmico</h2>
 
 <p>
 O <strong>School Business</strong> foi desenvolvido como projeto de Trabalho de Conclusão de Curso (TCC)
@@ -26,7 +26,7 @@ de produto, negócio e desenvolvimento tecnológico.
 
 <hr>
 
-<h2>📱 Sobre o Aplicativo</h2>
+<h2>Sobre o Aplicativo</h2>
 
 <p>
 Este repositório contém o <strong>aplicativo conceito</strong> do School Business,
@@ -53,7 +53,7 @@ convertidas em um aplicativo nativo.
 
 <hr>
 
-<h2>🎥 Demonstração e Download do Aplicativo</h2>
+<h2> Demonstração e Download do Aplicativo</h2>
 
 <ul>
   <li>Caso você queira, baixe o app versão Android no seu celular! <a href="https://drive.google.com/file/d/1bYMA41wJI2uXn-AGhzxpMznHuW_tcMi2/view?usp=sharing">Clique aqui!</a>
@@ -64,7 +64,7 @@ convertidas em um aplicativo nativo.
 
 <hr>
 
-<h2>🚀 Conceito</h2>
+<h2>Conceito</h2>
 
 <ul>
   <li>Rede educacional digital com conversas, grupos e interação social interna.</li>
@@ -75,7 +75,7 @@ convertidas em um aplicativo nativo.
 
 <hr>
 
-<h2>🛡️ Segurança e Moderação</h2>
+<h2>Segurança e Moderação</h2>
 
 <ul>
   <li>Sistema de moderação para mensagens, posts, vídeos e áudios.</li>
@@ -86,7 +86,7 @@ convertidas em um aplicativo nativo.
 
 <hr>
 
-<h2>🔒 Privacidade e Proteção de Dados</h2>
+<h2>Privacidade e Proteção de Dados</h2>
 
 <ul>
   <li>Conformidade com LGPD.</li>
@@ -97,7 +97,7 @@ convertidas em um aplicativo nativo.
 
 <hr>
 
-<h2>🌱 Gestão Moderna e Sustentável</h2>
+<h2>Gestão Moderna e Sustentável</h2>
 
 <ul>
   <li>Digitalização de processos para reduzir papel e burocracia.</li>
@@ -108,7 +108,7 @@ convertidas em um aplicativo nativo.
 
 <hr>
 
-<h2>💼 Modelo de Negócio</h2>
+<h2>Modelo de Negócio</h2>
 
 <ul>
   <li>Licenciamento B2B para instituições de ensino.</li>
